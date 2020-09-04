@@ -1,16 +1,21 @@
-package com.techproed.tests;
+package com.techproed.utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
 
-public class PriorityTest {
-    WebDriver driver;
+public abstract class TestBase {
+    // private -> sadece aynı class
+    // default -> aynı pakette
+    // protected -> aynı paket + child class'larda
+    // public -> heryerde
+
+    protected WebDriver driver;
+
     @BeforeClass
     public void setUp(){
         WebDriverManager.chromedriver().setup();
@@ -18,22 +23,9 @@ public class PriorityTest {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
     }
-    @Test (priority = 1)
-    public void dropDownTest01(){
-        driver.get("http://amazon.com");
-    }
-    @Test (priority = 0)//Calistirma onceligini belirliyor.
-    public void googleAramaTest02(){
-        driver.get("http://google.com");
-    }
-    @Test (priority = 2)
-    public void baslikTesti03(){
-        driver.get("http://facebook.com");
-    }
 
     @AfterClass
     public void tearDown(){
-        driver.quit();
+        //driver.quit();
     }
-
 }
