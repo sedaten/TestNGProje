@@ -21,7 +21,7 @@ public class FhcTripLoginTest extends TestBase {
         FhcTripLoginPage loginPage = new FhcTripLoginPage(driver);
         loginPage.userNameKutusu.sendKeys(ConfigurationReader.getProperty("username"));
         loginPage.passwordKutusu.sendKeys(ConfigurationReader.getProperty("password"));
-        loginPage
+
     }
 
 }

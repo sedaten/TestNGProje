@@ -13,7 +13,6 @@ public class FhcTripLoginPage<Webelement> extends TestBase {
         PageFactory.initElements(driver , this);
     }
 
-
     @FindBy (  id = "UserName" )   // locator yazmamız gerekiyor.
     public WebElement userNameKutusu;
 
