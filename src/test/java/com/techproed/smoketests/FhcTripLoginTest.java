@@ -1,4 +1,4 @@
-package smoketests;
+package com.techproed.smoketests;
 
 import com.techproed.pages.FhcTripLoginPage;
 import com.techproed.utilities.ConfigurationReader;

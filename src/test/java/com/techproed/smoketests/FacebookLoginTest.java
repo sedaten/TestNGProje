@@ -1,4 +1,4 @@
-package smoketests;
+package com.techproed.smoketests;
 
 public class FacebookLoginTest {
 
